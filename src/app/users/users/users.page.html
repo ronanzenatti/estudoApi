@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>users</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item button *ngFor="let usr of users" [routerLink]="'/user/' + usr.id">
+      <ion-avatar slot="start">
+        <img [src]="usr.avatar">
+      </ion-avatar>
+      <div>
+        {{usr.first_name + " " + usr.last_name}} <br />
+        {{usr.email}}
+      </div>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

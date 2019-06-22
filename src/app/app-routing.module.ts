@@ -11,10 +11,11 @@ const routes: Routes = [
     path: 'home',
     loadChildren: './home/home.module#HomePageModule'
   },
-  {
-    path: 'list',
-    loadChildren: './list/list.module#ListPageModule'
-  }
+  { path: 'clima', loadChildren: './clima/clima.module#ClimaPageModule' },
+  { path: 'movies', loadChildren: './movies/movies.module#MoviesPageModule' },
+  { path: 'movie/:id', loadChildren: './movie-details/movie-details.module#MovieDetailsPageModule' },
+  { path: 'users', loadChildren: './users/users/users.module#UsersPageModule' },
+  { path: 'user/:id', loadChildren: './users/user-details/user-details.module#UserDetailsPageModule' }
 ];
 
 @NgModule({
@@ -23,4 +24,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

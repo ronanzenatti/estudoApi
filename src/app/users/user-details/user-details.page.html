@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalhes User</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngIf="user">
+    <ion-card-header>
+      <h2>{{user.first_name}} {{user.last_name}}</h2>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-thumbnail>
+        <img [src]="user.avatar">
+      </ion-thumbnail>
+      <a [href]="'mailto:'+user.email">{{user.email}}</a>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
